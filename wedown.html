@@ -129,6 +129,25 @@
             <h1>JBMod Servers</h1>
 			<p><pre>Status: Offline</pre></p>
             <p>like the site is completely down the server is off my bad</p>
+		<script>
+function startCountdown(seconds) {
+  var countdownElement = document.getElementById('countdown');
+
+  var countdownInterval = setInterval(function() {
+    countdownElement.innerHTML = "Time till redirect: " + seconds + " seconds";
+
+    if (seconds === 0) {
+      clearInterval(countdownInterval);
+      countdownElement.innerHTML = "Redirecting...";
+      // Add redirect logic here
+    }
+
+    seconds--;
+  }, 1000);
+}
+
+// Set the countdown duration in seconds
+var countdownDuration = 3;
         </div>
     </div>
 </body>
