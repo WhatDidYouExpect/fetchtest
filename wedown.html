@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JBMod Servers (NEW UI)</title>
+    <link rel="icon" type="image/x-icon" href="https://thatwardrobeguy.neocities.org/endorsed.png">
+    <meta content="JBMod Servers (NEW UI)" property="og:title" />
+    <meta content="Displays JBMod Servers" property="og:description" />
+    <meta content="https://thatwardrobeguy.neocities.org/endorsed.png" property="og:image" />
+    <meta content="#b303d0" data-react-helmet="true" name="theme-color" />
+    <title>JBMod Serverlist Testing</title>
+<script>
+ fetch('/api/serverList', {
+        headers: {
+            'X-Requested-From': 'index.html' // Add the custom header
+        },
+    });
+</script>
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+		
+			background-color: #333;
+            color: #fff;
+            font-family: "Ubuntu", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+            font-family: 'Ubuntu', sans-serif;
+            padding: 20px;
+
+			background-color: #444;
+        }
+
+        .container h1 {
+            color: orange;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        a {
+            color: #ffffff;
+        }
+
+        hr {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: 0;
+            border-top: 1px solid #ccc;
+        }
+		body.dark-mode {
+            background-color: #efefef;
+            color: #000;
+        }
+
+        .container.dark-mode {
+            background-color: white;
+        }
+		
+		
+		.dark-mode-toggle {
+            font-size: 15px;
+            cursor: pointer;
+            margin: 10px;
+			background: none;
+            border: none;
+            outline: none;
+        }
+
+        .dark-mode-toggle.moon::before {
+            content: '';
+			font-size: 17px;
+            color: #FFFF00;
+        }
+
+        .dark-mode-toggle.sun::before {
+            content: '1F319';
+            color: #000000;
+        }
+		
+		body.dark-mode a {
+			color: #000;
+		}
+		
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="container">
+            <nav id="navbar">
+			 <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const darkModeToggle = document.createElement('button');
+            darkModeToggle.className = 'dark-mode-toggle moon';
+            darkModeToggle.addEventListener('click', toggleDarkMode);
+
+            document.body.insertBefore(darkModeToggle, document.body.firstChild);
+
+            function toggleDarkMode() {
+                document.body.classList.toggle('dark-mode');
+                document.querySelector('.container').classList.toggle('dark-mode');
+				document.querySelector('.dark-mode-a').classList.toggle('dark-mode');
+                darkModeToggle.classList.toggle('moon');
+                darkModeToggle.classList.toggle('sun');
+				darkModeToggle.classList.toggle('a');
+				
+            }
+        });
+    </script>
+                <div id="headerArea"></div>
+            </nav>				
+            <h1>JBMod Servers</h1>
+			<p><pre>Status: Offline</pre></p>
+            <p>like the site is completely down the server is off my bad</p>
+        </div>
+    </div>
+</body>
+
+</html>
