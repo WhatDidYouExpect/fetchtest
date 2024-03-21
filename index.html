@@ -212,7 +212,7 @@
     // Fetch new messages every 1 second
     function fetchNewMessages() {
         getGuestList();
-        setTimeout(fetchNewMessages, 1000); // Changed to 1000 milliseconds for 1 second delay
+        setTimeout(fetchNewMessages, 100); // Changed to 1000 milliseconds for 1 second delay
     }
 
     document.addEventListener('DOMContentLoaded', function () {
